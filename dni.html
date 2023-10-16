@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DNI</title>
+</head>
+
+<body>
+  <script>
+    var lletres = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+    var numDNI = prompt("Escribe solo el número del DNI");
+
+    var numDNI2 = parseInt(numDNI);
+
+    if (numDNI2 >= 0 && numDNI2 <= 99999999) {
+      var sobrante = numDNI2 % 23;
+      var lletraC = lletres[sobrante];
+
+      var lletraU = prompt("Ahora escribe la letra en mayusculas");
+
+      lletraU = lletraU.toUpperCase();
+
+      if (lletraU === lletraC) {
+        console.log("el DNI es correcto");
+      } else {
+        console.log("la letra no es correcta");
+      }
+    } else {
+      console.log("el numero del dni no es correcto");
+    }
+  </script>
+</body>
+
+</html>
