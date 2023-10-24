@@ -1,33 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>UT2 Exercici puntuable 1</title>
-</head>
+  </head>
 
-<body>
+  <!-- Enunciat exercici
 
-        <h2>Taula de multiplicar del 7</h2>
-        <script>
-            var num1 = 7;
+    Realitzar una petita aplicació en JavaScript que mostri el següent:
+        - Taula de multiplicar del 7. 
+        - Taula de sumar del 8. 
+        - Taula de dividir del 9. 
     
-            for (var potencia2 = 1; potencia2 <= 10; potencia2++) {
-                var resultat = num1 * potencia2;
-                document.write(num1 + " * " + potencia2 + " = " + resultat + "<br>");
-            }
+    Que la teva aplicació també imprimeixi el resultat de les operacions següents emprant desplaçament de bits:
+        - 125 / 8 = 
+        - 40 x 4 = 
+        - 25 / 2 = 
+        - 10 x 16 =
+
+  -->
+
+  <body>
+    <br>
+
+    <!-- Realització de taules -->
+
+    <h1>Realització de taules</h1><br>
+    <div class="row">
+      <div class="col">
+        <h2>Taula de multiplicar del 7</h2>
+        <script> // Bucle for
+          var num1 = 7;
+
+          for (var potencia2 = 1; potencia2 <= 10; potencia2++) {
+            var resultat = num1 * potencia2;
+            document.write(
+              num1 + " * " + potencia2 + " = " + resultat + "<br>"
+            );
+          }
         </script>
+      </div>
+
+      <div class="col">
         <h2>Taula de sumar del 8</h2>
-        <script>
-            var num1 = 8;
+        <script> // Bucle do-while
+          var num1 = 8;
+          var suma = 1;
 
-            
-
+          do {
+            var resultat = num1 + suma;
+            document.write(num1 + " + " + suma + " = " + resultat + "<br>");
+            suma++;
+          } while (suma <= 10);
         </script>
+      </div>
+
+      <div class="col">
         <h2>Taula de dividir del 9</h2>
+        <script> // Bucle while
+          var num1 = 9;
+          var divisio = 1;
 
-</body>
+          while (divisio <= 10) {
+            var resultat = num1 / divisio;
+            document.write(num1 + " / " + divisio + " = " + resultat + "<br>");
+            divisio++;
+          }
+        </script>
+      </div>
+    </div>
+    <br><br><br><br>
 
+    <!-- Operacions de desplaçaments de bits -->
+
+    <h1>Operacions de desplaçaments de bits</h1><br>
+    <div class="row">
+        <div class="col">
+            <h4>125 / 8 = </h4>
+            <script>
+                // 125 / 8 =
+                const resultat1 = 125 >> 3 ; // 3 bits a la dreta
+                document.write(resultat1);
+            </script>
+        </div>
+
+        <div class="col">
+            <h4>40 x 4 = </h4>
+            <script>
+                // 40 x 4 =
+                const resultat2 = 40 << 2 ; // 2 bits a l'esquerra
+                document.write(resultat2);
+            </script>
+        </div>
+
+        <div class="col">
+            <h4>25 / 2 = </h4>
+            <script>
+                // 25 / 2 =
+                const resultat3 = 25 >> 1 ; // 1 bit a la dreta
+                document.write(resultat3);
+            </script>
+        </div>
+
+        <div class="col">
+            <h4>10 x 16 =</h4>
+            <script>
+                // 10 x 16 = 
+                const resultat4 = 10 << 4 ; // 4 bits a l'esquerra
+                document.write(resultat4);
+            </script>
+        </div>
+    </div>
+
+  </body>
 </html>
